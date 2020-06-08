@@ -3,7 +3,7 @@
  */
 
 const getBranchDepth = (value, depth = 0) =>
-    (typeof value === 'object') ? getMaxDepth(value, ++depth) : depth;
+    (typeof value === 'object' && value !== null) ? getMaxDepth(value, ++depth) : depth;
 
 
 const getMaxDepth = (obj, depth = 0) =>
